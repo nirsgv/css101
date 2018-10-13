@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Slides from './components/Slides';
 import './App.css';
 
 class App extends Component {
@@ -34,7 +35,7 @@ class App extends Component {
             css-101 selectors & specificity
         </header>
         <main className="main hor-pad">
-
+            <Slides slideNum={this.state.slideNum}/>
         </main>
         <footer className="footer">
             <div className="pagination">
