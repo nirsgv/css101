@@ -7,7 +7,7 @@ const contentSwitcher = (slideNum) => {
     switch(slideNum) {
         case 1:
             content = `
-            <section class="content">
+            <section class="content center-all-children center-vertically">
                 <h1>CSS101</h1>
                 <h2>Specificity & Selectors</h2>
             </section>

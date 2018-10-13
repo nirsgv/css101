@@ -7,6 +7,12 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
   },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

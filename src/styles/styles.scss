@@ -53,17 +53,17 @@ table {
 
 }
 .presentation-header{
-position: fixed;
-    top: 0;
-    box-sizing: border-box;
-    width: calc(960px - 12rem);
-    padding: 0 2rem;
-    border-bottom: 1px solid #666;
-    height: 6rem;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    transform: translateX(-50%);
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  width: calc(960px - 12rem);
+  padding: 0 2rem;
+  border-bottom: 1px solid #666;
+  height: 6rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
 }
 .main{
   width: 100%;
@@ -78,7 +78,7 @@ position: fixed;
   padding-bottom: 4rem;
   overflow-y: auto;
   box-sizing: border-box;
-  }
+}
 .footer{
   position: fixed;
   width: 100%;
@@ -94,8 +94,8 @@ position: fixed;
   padding: 0 6rem;
 }
 .hor-pad{
-    padding-right: 2rem;
-    padding-left: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 @keyframes App-logo-spin {
   from {
@@ -106,42 +106,4 @@ position: fixed;
   }
 }
 
-/*start content section design*/
-section.content{
-  height: auto;
-  font-size: 1.6rem;
-}
-.content h1{
-  font-size: 2em;
-}
-.content h2{
-  font-size: 1.6em;
-}
-.content h3{
-  font-size: 1.4em;
-}
-.content h4{
-  font-size: 1.2em;
-}
-.content h5{
-  font-size: 1.1em;
-}
-.content h6{
-  font-size: 1em;
-}
 
-.center-all-children * {
-   text-align: center;
- }
-
-.slides{
-  height: 100%;
-}
-
-section.center-vertically {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-}
