@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactHtmlParserfrom from 'react-html-parser';
+import Preloader from './Preloader';
 
 import userAgentBodyPng from '../assets/user_agent_body.png';
 
@@ -292,10 +293,11 @@ const renderSlideNum = (slideNum) => {
     return ReactHtmlParserfrom(contentSwitcher(slideNum));
 };
 
-const Slides = ({slideNum}) => {
+const Slides = ({slideNum,parentTimer,preloaderMounted}) => {
     return (
       <div className="slides">
           {renderSlideNum(slideNum)}
+          {preloaderMounted && <Preloader parentTimer={parentTimer} />}
       </div>
     );
 };

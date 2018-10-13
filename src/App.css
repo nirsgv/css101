@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  font-family: 'Crimson Text', serif;
 }
 ol, ul {
   list-style: none;
@@ -144,7 +148,10 @@ section.content{
   line-height: 1.2;
   margin-bottom: 1em;
 }
-.content blockquote{
+.content h1,.content h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.content blockquote {
 
 }
 .content blockquote:before,.content blockquote:after{
@@ -166,6 +173,7 @@ section.content{
 
 .slides{
   height: 100%;
+  position: relative;
 }
 
 section.center-vertically {
@@ -190,4 +198,43 @@ table th {
 
 table tr {
   height: 2.4rem;
+}
+
+.animate{
+  animation-name: example;
+  animation-duration: 2s;
+  background: #eee;
+}
+@keyframes example {
+  from {width: 12rem;}
+  to {width: 16rem;}
+}
+
+.wrap-animate{
+  animation-name: example2;
+  animation-duration: 2s;
+}
+@keyframes example2 {
+  0% {opacity: 1;}
+  60% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.preloader-wrap{
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 6rem);
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  padding-left: 1em;
+}
+.preloader-wrap h2 {
+  font-size: 4em;
+}
+
+.preloader {
+  width: 12rem;
+  position: relative;
+  padding-left: 0.8rem;
 }

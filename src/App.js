@@ -7,10 +7,16 @@ class App extends Component {
         super(props);
         this.state = {
             slideNum: 1,
-            numOfSlides: 10
+            numOfSlides: 10,
+            preloaderMounted: true
         };
     }
+    parentTimer = () => {
+        this.setState({preloaderMounted:false});
+    };
     setSlideNum(direction) {
+        {this.state.preloaderMounted===false && this.setState({preloaderMounted:true});}
+
         if (direction==='prev'){
             if(this.state.slideNum>1){
             console.log('prev');
@@ -34,7 +40,7 @@ class App extends Component {
             css-101 selectors & specificity
         </header>
         <main className="main hor-pad">
-            <Slides slideNum={this.state.slideNum}/>
+            <Slides slideNum={this.state.slideNum} parentTimer={this.parentTimer} preloaderMounted={this.state.preloaderMounted}/>
         </main>
         <footer className="footer">
             <div className="pagination">
