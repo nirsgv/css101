@@ -250,6 +250,31 @@ const contentSwitcher = (slideNum) => {
             </section>
             `;
             break;
+        case 10:
+            content = `
+            <section class="content">
+                <h1>Order in specificity</h1>
+                <h2>Question:</h2>
+                <ul>
+                    <li><h3>Lets say these style declarations cannot change in order and we need to preserve line numbers as is, html markup cant change, we can only change first selector on line 1, and want all 'items' to have blue text-color.</h3></li>
+                    <li><h3>element class="item" /element</h3></li>
+                    <li><h3>element class="alert" /element</h3></li>
+                    <li><h3>element class="item alert" /element</h3></li>
+
+                    <li><h3>//line 1 <br/>
+                            .item {
+                              color: blue;
+                            }<br/>
+                            //line 20 <br/>
+                            .alert {
+                              color: red;
+                            }
+                    </h3></li>
+                    <li><h3>How would you change the first selector?</h3></li>
+                </ul>
+            </section>
+            `;
+            break;
         default:
             content = `
             <section class="content">
