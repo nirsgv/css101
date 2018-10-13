@@ -179,3 +179,15 @@ section.center-vertically {
 img.userAgentBodyPng{
   height: 100px;
 }
+
+table{
+  margin-top: 4.4rem;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table tr {
+  height: 2.4rem;
+}

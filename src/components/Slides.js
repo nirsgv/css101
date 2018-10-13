@@ -129,7 +129,9 @@ const contentSwitcher = (slideNum) => {
             break;
         case 7:
             content = `
+            
             <section class="content">
+            <div class="main-content">
                 <h1>Specificity</h1>
                 <ul>
                     <li><h3>Specificity is basically a measure of how specific a selector is — </h3></li>
@@ -138,12 +140,116 @@ const contentSwitcher = (slideNum) => {
                     <li><h3>ID selectors (Targeted by a hashtag followed by an id name like ‘#button’) have an even higher specificity.</h3></li>
                     <li><h2>Calculating a selector specificity</h2></li>
                     <li><h3>The amount of specificity a selector has is measured using three different values, <br/>which can be thought of as hundreds, tens and ones — three single digits in three columns.</h3></li>
+                <li>
+                    <table style="width:100%">
+                      <tr>
+                        <th>Selector</th>
+                        <th>Calculation</th>
+                        <th>Score</th>
+                      </tr>
+                      <tr>
+                        <td>*</td>
+                        <td>a=0 b=0 c=0 </td> 
+                        <td>specificity = 000</td>
+                      </tr>
+                      <tr>
+                        <td>LI</td>
+                        <td>a=0 b=0 c=1</td> 
+                        <td>specificity = 001</td>
+                      </tr>
+                      <tr>
+                        <td>UL LI</td>
+                        <td>a=0 b=0 c=2</td> 
+                        <td>specificity = 002</td>
+                      </tr>
+                       <tr>
+                        <td>UL OL+LI</td>
+                        <td>a=0 b=0 c=3</td> 
+                        <td>specificity = 003</td>
+                      </tr>
+                       <tr>
+                        <td>UL LI</td>
+                        <td>a=0 b=0 c=2</td> 
+                        <td>specificity = 002</td>
+                      </tr>
+                       <tr>
+                        <td>H1 + *[REL=up]</td>
+                        <td>a=0 b=1 c=1</td> 
+                        <td>specificity = 012</td>
+                      </tr>
+                       <tr>
+                        <td>UL OL LI.red</td>
+                        <td>a=0 b=1 c=3</td> 
+                        <td>specificity = 013</td>
+                      </tr>
+                       <tr>
+                        <td>LI.red.level</td>
+                        <td>a=0 b=2 c=1</td> 
+                        <td>specificity = 021</td>
+                      </tr>
+                       <tr>
+                        <td>#x34y</td>
+                        <td>a=1 b=0 c=0</td> 
+                        <td>specificity = 100</td>
+                      </tr>
+                       <tr>
+                        <td>#s12:not(FOO)</td>
+                        <td>a=1 b=0 c=1</td> 
+                        <td>specificity = 101</td>
+                      </tr>
+                    </table>
+                    </li>
                 </ul>
-                
+            </div>
+             <div class="secondary-content">
+                <h5 class="relevant-links-title">Relevant-links:</h5>
+                <h6 class="relevant-links-links"><a target="_blank" href="https://specificity.keegan.st/">Specificity<br/>claculator</a></h6>
+            </div>
             </section>
             `;
             break;
-
+        case 8:
+            content = `
+            <section class="content">
+                <h1>Order in specificity</h1>
+                <h2>Question:</h2>
+                <ul>
+                    <li><h3>Given these classes:</h3></li>
+                    <li><h3>.red {
+                            color: red;
+                            }
+                            .blue {
+                                color: blue;
+                            }
+                    </h3></li>
+                    <li><h3>Which text-color would these following elements be?</h3></li>
+                    <li><h3>element class="red blue" /element</h3></li>
+                    <li><h3>element class="blue red" /element</h3></li>
+                </ul>
+            </section>
+            `;
+            break;
+        case 9:
+            content = `
+            <section class="content">
+                <h1>Order in specificity</h1>
+                <h2>Answer:</h2>
+                <ul>
+                    <li><h3>Given these classes:</h3></li>
+                    <li><h3>.red {
+                            color: red;
+                            }
+                            .blue {
+                                color: blue;
+                            }
+                    </h3></li>
+                    <li><h3>All other things being equal, the last defined style is the one that’s used. (‘.blue’!)</h3></li>
+                    <li><h3>The ‘red’ and ‘blue’ classes both have the same specificity, a value of 010.</h3></li>
+                    <li><h3>The order of classes on an element doesn’t matter.</h3></li>
+                </ul>
+            </section>
+            `;
+            break;
         default:
             content = `
             <section class="content">
@@ -154,7 +260,7 @@ const contentSwitcher = (slideNum) => {
     }
 
     return content;
-}
+};
 
 
 const renderSlideNum = (slideNum) => {
