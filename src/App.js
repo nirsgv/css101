@@ -7,7 +7,7 @@ class App extends Component {
         super(props);
         this.state = {
             slideNum: 1,
-            numOfSlides: 10,
+            numOfSlides: 14,
             preloaderMounted: true
         };
     }
@@ -15,16 +15,16 @@ class App extends Component {
         this.setState({preloaderMounted:false});
     };
     setSlideNum(direction) {
-        {this.state.preloaderMounted===false && this.setState({preloaderMounted:true});}
-
         if (direction==='prev'){
             if(this.state.slideNum>1){
+            this.state.preloaderMounted===false && this.setState({preloaderMounted:true});
             console.log('prev');
                 this.setState({slideNum:this.state.slideNum-1})
             }
         }
         else if (direction==='next'){
             if(this.state.slideNum<this.state.numOfSlides){
+            this.state.preloaderMounted===false && this.setState({preloaderMounted:true});
             console.log('next');
                 this.setState({slideNum:this.state.slideNum+1})
             }

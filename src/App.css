@@ -202,21 +202,23 @@ table tr {
 
 .animate{
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: .8s;
   background: #eee;
 }
 @keyframes example {
-  from {width: 12rem;}
-  to {width: 16rem;}
+  0% {width: 11rem}
+  60% {width: 11rem}
+  100% {width: 16rem;}
 }
 
 .wrap-animate{
   animation-name: example2;
-  animation-duration: 2s;
+  animation-duration: .8s;
 }
+
 @keyframes example2 {
   0% {opacity: 1;}
-  60% {opacity: 1;}
+  70% {opacity: 1;}
   100% {opacity: 0;}
 }
 
@@ -228,6 +230,8 @@ table tr {
   top: 0;
   bottom: 0;
   padding-left: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+
 }
 .preloader-wrap h2 {
   font-size: 4em;
@@ -237,4 +241,8 @@ table tr {
   width: 12rem;
   position: relative;
   padding-left: 0.8rem;
+}
+
+iframe{
+  margin-top: 2rem;
 }

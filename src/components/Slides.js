@@ -143,6 +143,7 @@ const contentSwitcher = (slideNum) => {
                     <li><h3>The amount of specificity a selector has is measured using three different values, <br/>which can be thought of as hundreds, tens and ones — three single digits in three columns.</h3></li>
                 <li>
                     <table style="width:100%">
+                    <tbody>
                       <tr>
                         <th>Selector</th>
                         <th>Calculation</th>
@@ -198,6 +199,7 @@ const contentSwitcher = (slideNum) => {
                         <td>a=1 b=0 c=1</td> 
                         <td>specificity = 101</td>
                       </tr>
+                      </tbody>
                     </table>
                     </li>
                 </ul>
@@ -258,20 +260,71 @@ const contentSwitcher = (slideNum) => {
                 <h2>Question:</h2>
                 <ul>
                     <li><h3>Lets say these style declarations cannot change in order and we need to preserve line numbers as is, html markup cant change, we can only change first selector on line 1, and want all 'items' to have blue text-color.</h3></li>
-                    <li><h3>element class="item" /element</h3></li>
-                    <li><h3>element class="alert" /element</h3></li>
-                    <li><h3>element class="item alert" /element</h3></li>
+                    <li><h3>element class="calm" /element</h3></li>
+                    <li><h3>element class="red" /element</h3></li>
+                    <li><h3>element class="calm red" /element</h3></li>
 
                     <li><h3>//line 1 <br/>
-                            .item {
+                            .calm {
                               color: blue;
                             }<br/>
                             //line 20 <br/>
-                            .alert {
+                            .red {
                               color: red;
                             }
                     </h3></li>
                     <li><h3>How would you change the first selector?</h3></li>
+                    <li><h3><iframe height='265' scrolling='no' title='Adding specificity' src='//codepen.io/nir83/embed/JmygQO/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/JmygQO/'>Adding specificity</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe></h3></li>
+                </ul>
+            </section>
+            `;
+            break;
+            case 11:
+            content = `
+            <section class="content">
+                <h1>Why to not use ‘!important’ ever (almost) ?</h1>
+                <ul>
+                    <li><h3>!important is a wildcard which wins specificity battles. Even against inline styles.</h3></li>
+                    <li><h3>The only way to override is by using another !important rule, selected with higher specificity (or equal specificity later in the code).</h3></li>
+                    <li><h3>This leads to endless use of the !important, to have changes in code, and is hard to remove as each instance of it’s use took care of a specificity problem (without solving it) and is… important.</h3></li>
+                    <li><h3>The one exception where it might make sense to use !important:  on modifier classes that nudge and tweak style and might not always have the most specificity.</h3></li>
+                    <li><h3><iframe height='248' scrolling='no' title='not bold: important!' src='//codepen.io/nir83/embed/JmygjX/?height=248&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/JmygjX/'>not bold: important!</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe></h3></li>
+                </ul>
+            </section>
+            `;
+            break;
+        case 12:
+            content = `
+            <section class="content">
+                <h1>To much specificity is bad by nature.</h1>
+                <ul>
+                    <li><h3>!important is considered a bad practice because it’s high specificity is hard to win over or to remove later from code.</h3></li>
+                    <li><h3>This is true to high specificity in general.</h3></li>
+                    <li><h3>ID’s have a high specificity value and should be avoided as well from selectors and are better to be kept for js use only.</h3></li>
+                    <li><h3>Classnames and attributes are more ideal as they are specific enough to target all elements when used correctly.</h3></li>
+                    <li><h3><iframe height='213' scrolling='no' title='not bold: important!' src='//codepen.io/nir83/embed/JmygjX/?height=213&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/JmygjX/'>not bold: important!</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe></h3></li>
+                    <li><h3>Tags are too general, will target all elements and cause more overhead to the rendering engine.<br/> They can also be changed in markup with devastating effects to styling</h3></li>
+                    <li><h3><iframe height='265' scrolling='no' title='changed markup missed the tag selector' src='//codepen.io/nir83/embed/MPvNZK/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/MPvNZK/'>changed markup missed the tag selector</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe></h3></li>
+                </ul>
+            </section>
+            `;
+            break;
+        case 13:
+            content = `
+            <section class="content">
+                <h1>Inheritance</h1>
+                <ul>
+                    <li><h3>CSS inheritance works on a property by property basis.</h3></li>
+                    <li><h3>When applied to an element in a document, a property with the value 'inherit' will use the same value as the parent element with that property.</h3></li>
+                    <li><h3>Some properties are inherited by default and some are not.  the color property for instance is inherited by default. setting the color property value to initial will remove this behavior.</h3></li>
+                    <li><h3><iframe height='265' scrolling='no' title='Inherit basics' src='//codepen.io/nir83/embed/XxROdY/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/XxROdY/'>Inherit basics</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe></h3></li>
+                    <li><h3>You should check if a property is inherited by default or not. For instance the ‘display’ property: <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">mdn</a>  is not inherited (by default).</h3></li>
+                    <li><h3>Using ‘inherit’ on a property is used to inherit it’s parent property value, not it’s parent actual value.</h3></li>
+                    <li><h3>Inherited values can be misleading. Consider this example:</h3></li>
+                    <li><h3><iframe height='265' scrolling='no' title='inherit pitfalls' src='//codepen.io/nir83/embed/JmNzRG/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/JmNzRG/'>inherit pitfalls</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe></h3></li>
                 </ul>
             </section>
             `;
