@@ -57,7 +57,7 @@ table {
 
 }
 .presentation-header{
-position: fixed;
+    position: fixed;
     top: 0;
     box-sizing: border-box;
     width: calc(960px - 12rem);
@@ -97,6 +97,9 @@ position: fixed;
   justify-content: space-between;
   padding: 0 6rem;
 }
+button#next-slide {
+  margin-left: .6rem;
+}
 .hor-pad{
     padding-right: 2rem;
     padding-left: 2rem;
@@ -121,10 +124,13 @@ section.content{
   padding-bottom: 4rem;
 }
 .secondary-content{
-  width: 15%;
-  margin-left: 3%;
-  display: inline-block;
-  position: fixed;
+   width: 7%;
+   margin-left: 3%;
+   display: inline-block;
+   position: fixed;
+ }
+.secondary-content a:link,.secondary-content a:visited {
+  color: #3366BB;
 }
 .content h1{
   font-size: 2em;
@@ -188,6 +194,10 @@ img.userAgentBodyPng{
   height: 100px;
 }
 
+img.rickMorty,img.chessBoard {
+  height: 160px;
+}
+
 table{
   margin-top: 4.4rem;
 }
@@ -202,7 +212,7 @@ table tr {
 
 .animate{
   animation-name: example;
-  animation-duration: .8s;
+  animation-duration: 1.2s;
   background: #eee;
 }
 @keyframes example {
@@ -213,7 +223,7 @@ table tr {
 
 .wrap-animate{
   animation-name: example2;
-  animation-duration: .8s;
+  animation-duration: 1.2s;
 }
 
 @keyframes example2 {
