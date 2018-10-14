@@ -124,10 +124,11 @@ section.content{
   padding-bottom: 4rem;
 }
 .secondary-content{
-   width: 7%;
    margin-left: 3%;
    display: inline-block;
    position: fixed;
+   max-width: 12rem;
+   /*text-align: right;*/
  }
 .secondary-content a:link,.secondary-content a:visited {
   color: #3366BB;

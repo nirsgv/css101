@@ -7,7 +7,7 @@ class App extends Component {
         super(props);
         this.state = {
             slideNum: 1,
-            numOfSlides: 15,
+            numOfSlides: 17,
             preloaderMounted: true
         };
     }
