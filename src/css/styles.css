@@ -48,11 +48,14 @@ table {
   border-spacing: 0; }
 
 .App {
-  max-width: 96rem;
   height: 100vh;
   margin: 0 auto;
   border: solid #eee;
-  border-width: 0 1px; }
+  border-width: 0 1px;
+  width: 96rem; }
+  @media only screen and (max-width: 375px) {
+    .App {
+      width: 90%; } }
 
 .presentation-header {
   position: fixed;
@@ -61,14 +64,17 @@ table {
   width: calc(96rem - 12rem);
   padding: 0 2rem;
   border-bottom: 1px solid #666;
-  height: 6rem;
   left: 50%;
   display: flex;
   align-items: center;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  height: 6rem; }
+  @media only screen and (max-width: 375px) {
+    .presentation-header {
+      height: 8rem;
+      width: calc(90% - 12rem); } }
 
 .main {
-  width: 100%;
   height: calc(100% - 12rem);
   z-index: 2;
   background-color: #fff;
@@ -80,6 +86,11 @@ table {
   padding-bottom: 4rem;
   overflow-y: auto;
   box-sizing: border-box; }
+  @media only screen and (max-width: 375px) {
+    .main {
+      top: 8rem;
+      width: 100%;
+      height: calc(100% - (2 * 8rem)); } }
 
 .footer {
   position: fixed;
@@ -94,6 +105,9 @@ table {
   align-items: center;
   justify-content: space-between;
   padding: 0 6rem; }
+  @media only screen and (max-width: 375px) {
+    .footer {
+      height: 8rem; } }
 
 button#next-slide {
   margin-left: .6rem; }
@@ -112,19 +126,26 @@ button#next-slide {
 section.content {
   height: auto;
   font-size: 1.6rem; }
+  @media only screen and (max-width: 375px) {
+    section.content {
+      font-size: 1rem; } }
 
 .main-content {
   width: 68rem;
   display: inline-block;
   padding-bottom: 4rem; }
+  @media only screen and (max-width: 375px) {
+    .main-content {
+      width: 100%; } }
 
 .secondary-content {
-  display: inline-block;
   position: fixed;
   margin-left: 6.6rem;
   display: inline-block;
-  width: 11rem;
-  /*text-align: right;*/ }
+  width: 11rem; }
+  @media only screen and (max-width: 375px) {
+    .secondary-content {
+      display: none; } }
 
 .secondary-content a:link, .secondary-content a:visited {
   color: #3366BB; }
