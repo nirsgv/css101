@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slides from './components/Slides';
-import './App.css';
+import './css/styles.css';
 
 class App extends Component {
     constructor(props) {
@@ -29,7 +29,8 @@ class App extends Component {
                 this.setState({slideNum:this.state.slideNum+1})
             }
         };
-    }
+    };
+
     presentPagination(){
         return `Slide: ${this.state.slideNum} / ${this.state.numOfSlides}`
     }

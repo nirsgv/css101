@@ -7,13 +7,13 @@ var gulp = require('gulp'),
 
 
 gulp.task('sass', function () {
-    return gulp.src('./styles/**/*.scss')
+    return gulp.src('./src/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./src/css'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./styles/**/*.scss', ['sass']);
+    gulp.watch('./src/styles/**/*.scss', ['sass']);
 });
 
 gulp.task('connect', function() {
@@ -32,7 +32,7 @@ gulp.task('html', function () {
 gulp.task('default', ['connect', 'sass', 'sass:watch']);
 
 gulp.task('sassLint', function () {
-    return gulp.src('./styles/**/*.s+(a|c)ss')
+    return gulp.src('./src/styles/**/*.s+(a|c)ss')
         .pipe(sassLint(
             {
                 configFile: '.sass-lint.yml',
