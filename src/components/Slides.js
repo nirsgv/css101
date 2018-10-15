@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactHtmlParserfrom from 'react-html-parser';
 import Preloader from './Preloader';
 
-import userAgentBodyPng from '../assets/user_agent_body.png';
 
 const contentSwitcher = (slideNum) => {
     let content;
@@ -89,14 +88,10 @@ const contentSwitcher = (slideNum) => {
                     <li><h3>The idea of a CSS reset is to deal with styling inconsistencies across browsers. For example:</h3></li>
                     <li><h3><button> I am a button inserted into a page with no other styling whatsoever other to a reset. If i have not been reset- Chrome applies padding: 2px 6px 3px; - Firefox applies padding: 0 8px;. A CSS reset would apply new padding to that element, so that all browsers are consistent about what they apply.</button></h3></li>
                     <li><h3>Example ‘reset’ declaration:</h3></li>
-                    <li><h3>html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}</h3></li>
+                    <li>
+                    <iframe height='265' scrolling='no' title='reset.css example' src='//codepen.io/nir83/embed/LgzmXL/?height=265&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/LgzmXL/'>reset.css example</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</li>
                 </ul>
             </div>
             <div class="secondary-content">
@@ -417,6 +412,33 @@ const contentSwitcher = (slideNum) => {
             `;
             break;
         case 17:
+            content = `
+            <section class="content">
+                <div class="main-content">
+                <h1>Attribute selectors</h1>
+                <ul>
+                    <li><h3>We can use an element's attribute as a selector.</h3></li>
+                    <li><h3>Attributes can present another key-value pair we can relate to in our selector. Or can be a single value.</h3></li>
+                    <li><h3>A selector like [class] would select all elements with a class attribute.</h3></li>
+                    <li><h3>A selector like [class="big"] would select all elements with a classname - big value.</h3></li>
+                    <li><h3>An attribute with a value paired has the same specificity as an attribute with a key only.</h3></li>
+                    <li><h3>E[foo$="bar"] - an E element whose "foo" attribute value ends exactly with the string "bar"</h3></li>
+                    <li><h3>E[foo*="bar"] - an E element whose "foo" attribute value contains the substring "bar"</h3></li>
+                    <li><h3>[title*="example" i] - 
+Selects elements whose title contains "example", ignoring case. In browsers that don't support the "i" flag, this selector probably won't match any element.</h3></li>                    
+<li><h3>a[href^="https://"] - 
+Selects secure links.</h3></li>
+<li><h3>img[src$=".jpg"]
+Indirectly selects PNG images; Keep in mind that this certainly won't work for gifs and pngs.</h3></li>
+                </ul>
+                </div>
+
+
+
+            </section>
+            `;
+            break;
+        case 18:
             content = `
             <section class="content">
                 <div class="main-content">
