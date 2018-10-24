@@ -35,8 +35,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  //font-family: 'Crimson Text', serif;
-  font-family: 'Source Sans Pro';
+  font-family: 'Crimson Text', serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
 }
 ol, ul {
   list-style: none;
@@ -118,7 +119,7 @@ table {
 /*start content section design*/
 section.content{
   height: auto;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   @media only screen and (max-width : 375px) {
     font-size: 1rem;
   }
@@ -145,6 +146,10 @@ section.content{
 .secondary-content a:link,.secondary-content a:visited {
   color: #3366BB;
 }
+.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
 .content h1{
   font-size: 2em;
 }
@@ -162,13 +167,11 @@ section.content{
 }
 .content h6{
   font-size: 1em;
-}
-.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{
-  line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
 }
 .content h1,.content h2 {
-  font-family: 'Source Sans Pro', sans-serif;
+  //font-family: 'Source Sans Pro', sans-serif;
+  color: #444;
 }
 .content blockquote {
 
@@ -236,7 +239,9 @@ table tr {
   animation-name: example2;
   animation-duration: 1.2s;
 }
-
+.bold{
+  font-weight: 700;
+}
 .preloader-wrap{
   position: fixed;
   width: 100%;

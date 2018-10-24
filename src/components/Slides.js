@@ -25,6 +25,7 @@ const contentSwitcher = (slideNum) => {
                     <li><h3>Specificity</h3></li>
                     <li><h3>The cascade</h3></li>
                     <li><h3>Selectors</h3></li>
+                    <li><h3>Exc.</h3></li>
                 </ul>
             </section>
             `;
@@ -66,7 +67,7 @@ const contentSwitcher = (slideNum) => {
             </div>
             <div class="secondary-content">
                 <h5 class="relevant-links-title">Relevant-links:</h5>
-                <h6 class="relevant-links-links"><a target="_blank" href="https://motherfuckingwebsite.com/">motherfuckingwebsite</a></h6>
+                <h6 class="relevant-links-links"><a target="_blank" href="https://motherfuckingwebsite.com/">mother...</a></h6>
                 <h6 class="relevant-links-links"><a target="_blank" href="https://brutalist-web.design/?mc_cid=5d7b376920&mc_eid=8d920332b5">brutalist-web</a></h6>
             </div>
             </section>
@@ -77,13 +78,13 @@ const contentSwitcher = (slideNum) => {
             <section class="content">
             <div class="main-content">
                 <h1>Pros and cons of user agent stylesheet</h1>
-                <h2>Pros</h2>
+                <h2 class="bold">Pros</h2>
                 <ul>
                     <li><h3>"Good design is as little design as possible.”</h3></li>
                     <li><h3>Will essentially function the same across all browsers and devices.</h3></li>
                     <li><h3>Most easily overridden by our, self written - Author style sheets.</h3></li>
                 </ul>
-                <h2>Cons</h2>
+                <h2 class="bold">Cons</h2>
                 <ul>
                     <li><h3>As browsers aim to provide the best experience, and have a singular better look then others, they provide different base styles.</h3></li>
                     <li><h3>When defining our own styles to match our designs, we essentially want to have a unified look & feel for all browsers. We gain no benefit from different styles presented with different browsers.</h3></li>
@@ -92,7 +93,7 @@ const contentSwitcher = (slideNum) => {
             </div>
             <div class="secondary-content">
                 <h5 class="relevant-links-title">Relevant-links:</h5>
-                <h6 class="relevant-links-links"><a target="_blank" href="https://motherfuckingwebsite.com/">motherfuckingwebsite</a></h6>
+                <h6 class="relevant-links-links"><a target="_blank" href="https://motherfuckingwebsite.com/">mother...</a></h6>
                 <h6 class="relevant-links-links"><a target="_blank" href="https://brutalist-web.design/?mc_cid=5d7b376920&mc_eid=8d920332b5">brutalist-web</a></h6>
             </div>
             </section>
@@ -120,6 +121,7 @@ const contentSwitcher = (slideNum) => {
                 <h5 class="relevant-links-title">Relevant-links:</h5>
                 <h6 class="relevant-links-links"><a target="_blank" href="https://necolas.github.io/normalize.css/">normalize.css</a></h6>
                 <h6 class="relevant-links-links"><a target="_blank" href="https://cssreset.com/scripts/eric-meyer-reset-css/">reset.css</a></h6>
+                <h6 class="relevant-links-links"><a target="_blank" href="https://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css">normalize vs. reset</a></h6>
             </div>
             
             </section>
@@ -242,7 +244,6 @@ div ul li {<br/>
                     which is lower than the first declaration (010).</h3></li>
 
                     </h3></li>
-                    <li><h3>Which text-color would these following elements be?</h3></li>
                     <li>
 <iframe height='265' scrolling='no' title='Specificity in declarations - answer' src='//codepen.io/nir83/embed/KGrvBY/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/KGrvBY/'>Specificity in declarations - answer</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -411,6 +412,7 @@ div ul li {<br/>
             <section class="content">
                <h1>The cascade</h1>
                    <h3> CSS declarations originate from different origins: </h3>
+                   <ul>
                    <ul class="inner-bulleted">
                         <li><h3>User-agent stylesheets (browser specific styles defined by browser vendors)</h3></li>
                         <li><h3>Author stylesheets (what we, the developers, write and work with)</h3></li>
@@ -497,7 +499,9 @@ div ul li {<br/>
                 <ul>
                     <li><h3>CSS inheritance works on a property by property basis.</h3></li>
                     <li><h3>When applied to an element in a document, a property with the value 'inherit' will use the same value as the parent element with that property.</h3></li>
-                    <li><h3>Some properties are inherited by default and some are not.  the color property for instance is inherited by default. setting the color property value to initial will remove this behavior.</h3></li>
+                    <li><h3>Some properties are inherited by default and some are not.  the color property for instance is inherited by default. setting the color property value to initial
+                     applies the initial value as defined in the CSS specifications. Sometimes this initial value makes sense (float: none), sometimes it’s there for historical reasons (background-repeat: repeat).
+                     </h3></li>
                     <li><h3><iframe height='265' scrolling='no' title='Inherit basics' src='//codepen.io/nir83/embed/XxROdY/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/XxROdY/'>Inherit basics</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe></h3></li>
                     <li><h3>You should check if a property is inherited by default or not. For instance the ‘display’ property: <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">mdn</a>  is not inherited (by default).</h3></li>
                     <li><h3>Using ‘inherit’ on a property is used to inherit it’s parent property value, not it’s parent actual value.</h3></li>
