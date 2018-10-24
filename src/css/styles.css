@@ -1,5 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+@keyframes example {
+  0% {
+    width: 11rem; }
+  60% {
+    width: 11rem; }
+  100% {
+    width: 16rem; } }
+
+@keyframes example2 {
+  0% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes pagination--animation {
+  from {
+    transform: scale(1.4); }
+  to {
+    transform: scale(1); } }
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 6rem;
+  z-index: 2;
+  border-top: 1px solid #aaa;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem; }
+  @media only screen and (max-width: 375px) {
+    .footer {
+      height: 8rem; } }
+
+button#next-slide {
+  margin-left: .6rem; }
+
+.pagination {
+  font-size: 1.4em; }
+
+.pagination--animate {
+  animation-name: pagination--animation;
+  animation-duration: .8s;
+  animation-timing-function: ease-out; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,14 +111,16 @@ table {
   position: fixed;
   top: 0;
   box-sizing: border-box;
-  width: calc(96rem - 12rem);
+  width: calc(96rem - 22rem);
   padding: 0 2rem;
   border-bottom: 1px solid #666;
   left: 50%;
   display: flex;
   align-items: center;
   transform: translateX(-50%);
-  height: 6rem; }
+  height: 6rem;
+  font-size: 1.4em;
+  padding: 0 0rem; }
   @media only screen and (max-width: 375px) {
     .presentation-header {
       height: 8rem;
@@ -92,29 +144,9 @@ table {
       width: 100%;
       height: calc(100% - (2 * 8rem)); } }
 
-.footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 6rem;
-  z-index: 2;
-  border-top: 1px solid #aaa;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 6rem; }
-  @media only screen and (max-width: 375px) {
-    .footer {
-      height: 8rem; } }
-
-button#next-slide {
-  margin-left: .6rem; }
-
 .hor-pad {
-  padding-right: 2rem;
-  padding-left: 2rem; }
+  padding-right: 8rem;
+  padding-left: 8rem; }
 
 @keyframes App-logo-spin {
   from {
@@ -131,7 +163,7 @@ section.content {
       font-size: 1rem; } }
 
 .main-content {
-  width: 68rem;
+  width: 60rem;
   display: inline-block;
   padding-bottom: 4rem; }
   @media only screen and (max-width: 375px) {
@@ -220,35 +252,21 @@ table tr {
   animation-duration: 1.2s;
   background: #eee; }
 
-@keyframes example {
-  0% {
-    width: 11rem; }
-  60% {
-    width: 11rem; }
-  100% {
-    width: 16rem; } }
-
 .wrap-animate {
   animation-name: example2;
   animation-duration: 1.2s; }
 
-@keyframes example2 {
-  0% {
-    opacity: 1; }
-  70% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
 .preloader-wrap {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: calc(100% + 6rem);
   background-color: #fff;
-  top: 0;
+  top: 6rem;
   bottom: 0;
-  padding-left: 1em;
-  font-family: 'Source Sans Pro', sans-serif; }
+  padding-left: 0em;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-top: 4rem;
+  max-width: 84rem; }
 
 .preloader-wrap h2 {
   font-size: 4em; }
@@ -256,7 +274,7 @@ table tr {
 .preloader {
   width: 12rem;
   position: relative;
-  padding-left: 0.8rem; }
+  padding: 1rem 1rem 1.6rem 1.8rem; }
 
 iframe {
   margin-top: 2rem; }

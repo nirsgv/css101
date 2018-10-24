@@ -1,0 +1,16 @@
+@keyframes example {
+  0% {width: 11rem}
+  60% {width: 11rem}
+  100% {width: 16rem;}
+}
+
+@keyframes example2 {
+  0% {opacity: 1;}
+  70% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes pagination--animation {
+  from {transform: scale(1.4);}
+  to {transform: scale(1);}
+}

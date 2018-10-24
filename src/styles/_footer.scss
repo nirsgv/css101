@@ -1,0 +1,33 @@
+@import "constants";
+
+.footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: $desktop-header-height;
+  z-index: 2;
+  border-top: 1px solid #aaa;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+  @media only screen and (max-width : 375px) {
+    height: $mobile-header-height;
+  }
+}
+
+button#next-slide {
+  margin-left: .6rem;
+}
+
+.pagination{
+  font-size: 1.4em;
+}
+
+.pagination--animate{
+  animation-name: pagination--animation;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+}

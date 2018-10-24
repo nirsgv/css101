@@ -8,7 +8,7 @@ class App extends Component {
         this.state = {
             slideNum: 1,
             numOfSlides: 18,
-            preloaderMounted: true
+            preloaderMounted: false
         };
     }
     parentTimer = () => {
@@ -37,15 +37,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="presentation-header hor-pad">
+        <header className="presentation-header">
             css-101 selectors & specificity
         </header>
         <main className="main hor-pad">
             <Slides slideNum={this.state.slideNum} parentTimer={this.parentTimer} preloaderMounted={this.state.preloaderMounted}/>
         </main>
         <footer className="footer">
-            <div className="pagination">
-                {this.presentPagination()}
+            <div className={`pagination ${this.state.preloaderMounted===true ? 'pagination--animate' : ''}`}>
+                <span>
+                    {this.presentPagination()}
+                </span>
             </div>
             <nav>
                 <button id="prev-slide" className="button prev" onClick={()=>{this.setSlideNum('prev')}}>prev</button>
