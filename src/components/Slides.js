@@ -512,6 +512,10 @@ div ul li {<br/>
                      applies the initial value as defined in the CSS specifications. Sometimes this initial value makes sense (float: none), sometimes it’s there for historical reasons (background-repeat: repeat).
                      </h3></li>
                     <li><h3><iframe height='265' scrolling='no' title='Inherit basics' src='//codepen.io/nir83/embed/XxROdY/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/XxROdY/'>Inherit basics</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe></h3></li>
+                    <li><h3>
+                    <iframe height='265' scrolling='no' title='inherit' src='//codepen.io/nir83/embed/GYwedp/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/GYwedp/'>inherit</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</h3></li>
                     <li><h3>You should check if a property is inherited by default or not. For instance the ‘display’ property: <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">mdn</a>  is not inherited (by default).</h3></li>
                     <li><h3>Using ‘inherit’ on a property is used to inherit it’s parent property value, not it’s parent actual value.</h3></li>
                     <li><h3>Inherited values can be misleading. Consider this example:</h3></li>
