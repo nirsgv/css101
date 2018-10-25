@@ -441,8 +441,12 @@ div ul li {<br/>
                     <li><h3>The only way to override is by using another !important rule, selected with higher specificity (or equal specificity later in the code).</h3></li>
                     <li><h3>This leads to endless use of the !important, to have changes in code, and is hard to remove as each instance of it’s use took care of a specificity problem (without solving it) and is… important.</h3></li>
                     <li><h3>The one exception where it might make sense to use !important:  on modifier classes that nudge and tweak style and might not always have the most specificity.</h3></li>
-                    <li><h3><iframe height='248' scrolling='no' title='not bold: important!' src='//codepen.io/nir83/embed/JmygjX/?height=248&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/JmygjX/'>not bold: important!</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe></h3></li>
+                    <li>
+                    
+                    <iframe height='265' scrolling='no' title='!important on explicit modifier' src='//codepen.io/nir83/embed/Zqmwvp/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/Zqmwvp/'>!important on explicit modifier</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+                    
+</li>
                 </ul>
 
                     </section>
