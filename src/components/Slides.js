@@ -411,6 +411,11 @@ div ul li {<br/>
             content = `
             <section class="content">
                <h1>The cascade</h1>
+                   <h2>There are many elements on a page,
+                   We dont want to target each one specificaly.
+                   </h2>
+                   <iframe height='265' scrolling='no' title='cascading' src='//codepen.io/nir83/embed/KGrVeY/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/nir83/pen/KGrVeY/'>cascading</a> by nir.segev (<a href='https://codepen.io/nir83'>@nir83</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
                    <h3> CSS declarations originate from different origins: </h3>
                    <ul>
                    <ul class="inner-bulleted">
